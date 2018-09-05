@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            My WebSite
+        </title>
+    </head>
+    
+    <body>
+        <h1>headline</h1>
+        {{headName}}
+        
+        {% if new_year %}
+            <h2>Happy new year</h2>
+        {% else %}
+            <h2>No</h2>
+        {% endif %}
+        
+        <h2>Names</h2>
+        <ul>
+            {% for name in names %}
+            <li>{{name}}</li>
+            {% endfor %}
+        </ul>
+        
+    </body>
+</html>

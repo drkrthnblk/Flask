@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Main Page
+{% endblock %}
+
+{% block body %}
+<p>
+    this is the main body text.
+</p>
+<br>
+<h2>Name: </h2>
+    {{userName}}
+<form action="{{url_for('hello')}}" method="post">
+    <input type="text" name="Name" placeholder="username">
+    <button>Submit</button>
+</form>
+<a href="{{url_for('more')}}">More Info</a>
+{% endblock %}

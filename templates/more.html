@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Second Page
+{% endblock %}
+
+{% block body %}
+<p>
+    this is the more body text.
+</p>
+<h2>Notes</h2>
+<ul>
+    {% for note in notes %}
+    <li>{{note}}</li>
+    {% endfor %}
+</ul>
+
+<form action="{{url_for('sessionEg')}}" method="POST">
+    <input type="text" name="note" placeholder="note">
+    <button>Submit</button>
+</form>
+
+<a href="{{url_for('rerouting')}}">Data</a>
+{% endblock %}
